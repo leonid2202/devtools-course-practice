@@ -95,7 +95,6 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
     }
 
     LengthConverter lenConv;
-    double res;
     std::ostringstream stream;
 
     try {
@@ -103,17 +102,17 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Centimeter:
             switch (args.targetLengthUnit) {
             case Meter:
-                res = lenConv.centimetersToMeters(args.originalValue);
+                double res = lenConv.centimetersToMeters(args.originalValue);
                 stream << args.originalValue << " centimeters is "
                     << res << " meters";
                 break;
             case Inch:
-                res = lenConv.centimetersToInches(args.originalValue);
+                double res = lenConv.centimetersToInches(args.originalValue);
                 stream << args.originalValue << " centimeters is "
                     << res << " inches";
                 break;
             case Span:
-                res = lenConv.centimetersToSpans(args.originalValue);
+                double res = lenConv.centimetersToSpans(args.originalValue);
                 stream << args.originalValue << " centimeters is "
                     << res << " spans";
                 break;
@@ -125,47 +124,47 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Meter:
             switch (args.targetLengthUnit) {
             case Centimeter:
-                res = lenConv.metersToCentimeters(args.originalValue);
+                double res = lenConv.metersToCentimeters(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " centimeters";
                 break;
             case Kilometer:
-                res = lenConv.metersToKilometers(args.originalValue);
+                double res = lenConv.metersToKilometers(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " kilometers";
                 break;
             case Foot:
-                res = lenConv.metersToFoot(args.originalValue);
+                double res = lenConv.metersToFoot(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " feet";
                 break;
             case NauticalMile:
-                res = lenConv.metersToNauticalMiles(args.originalValue);
+                double res = lenConv.metersToNauticalMiles(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " nautical miles";
             case Mile:
-                res = lenConv.metersToMiles(args.originalValue);
+                double res = lenConv.metersToMiles(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " miles";
                 break;
             case Yard:
-                res = lenConv.metersToYards(args.originalValue);
+                double res = lenConv.metersToYards(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " yards";
             case Inch:
-                res = lenConv.metersToInches(args.originalValue);
+                double res = lenConv.metersToInches(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " inches";
             case AstronomicalUnit:
-                res = lenConv.metersToAstronomicalUnits(args.originalValue);
+                double res = lenConv.metersToAstronomicalUnits(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " astronomical units";
             case Span:
-                res = lenConv.metersToSpans(args.originalValue);
+                double res = lenConv.metersToSpans(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " spans";
             case Verst:
-                res = lenConv.metersToVersts(args.originalValue);
+                double res = lenConv.metersToVersts(args.originalValue);
                 stream << args.originalValue << " meters is "
                     << res << " versts";
                 break;
@@ -177,17 +176,17 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Kilometer:
             switch (args.targetLengthUnit) {
             case Meter:
-                res = lenConv.kilometersToMeters(args.originalValue);
+                double res = lenConv.kilometersToMeters(args.originalValue);
                 stream << args.originalValue << " kilometers is "
                     << res << " meters";
                 break;
             case Mile:
-                res = lenConv.kilometersToMiles(args.originalValue);
+                double res = lenConv.kilometersToMiles(args.originalValue);
                 stream << args.originalValue << " kilometers is "
                     << res << " miles";
                 break;
             case AstronomicalUnit:
-                res = lenConv.kilometersToAstronomicalUnits(args.originalValue);
+                double res = lenConv.kilometersToAstronomicalUnits(args.originalValue);
                 stream << args.originalValue << " kilometers is "
                     << res << " astronomical units";
                 break;
@@ -199,12 +198,12 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Mile:
             switch (args.targetLengthUnit) {
             case Kilometer:
-                res = lenConv.milesToKilometers(args.originalValue);
+                double res = lenConv.milesToKilometers(args.originalValue);
                 stream << args.originalValue << " miles is "
                     << res << " kilometers";
                 break;
             case Meter:
-                res = lenConv.milesToMeters(args.originalValue);
+                double res = lenConv.milesToMeters(args.originalValue);
                 stream << args.originalValue << " miles is "
                     << res << " meters";
                 break;
@@ -216,12 +215,12 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Foot:
             switch (args.targetLengthUnit) {
             case Meter:
-                res = lenConv.footToMeters(args.originalValue);
+                double res = lenConv.footToMeters(args.originalValue);
                 stream << args.originalValue << " feet is "
                     << res << " meters";
                 break;
             case Yard:
-                res = lenConv.footToYards(args.originalValue);
+                double res = lenConv.footToYards(args.originalValue);
                 stream << args.originalValue << " feet is "
                     << res << " yards";
                 break;
@@ -233,12 +232,12 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Yard:
             switch (args.targetLengthUnit) {
             case Foot:
-                res = lenConv.yardsToFoot(args.originalValue);
+                double res = lenConv.yardsToFoot(args.originalValue);
                 stream << args.originalValue << " yards is "
                     << res << " feet";
                 break;
             case Meter:
-                res = lenConv.yardsToMeters(args.originalValue);
+                double res = lenConv.yardsToMeters(args.originalValue);
                 stream << args.originalValue << " yards is "
                     << res << " meters";
                 break;
@@ -250,12 +249,12 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Inch:
             switch (args.targetLengthUnit) {
             case Centimeter:
-                res = lenConv.inchesToCentimeters(args.originalValue);
+                double res = lenConv.inchesToCentimeters(args.originalValue);
                 stream << args.originalValue << " inches is "
                     << res << " centimeters";
                 break;
             case Meter:
-                res = lenConv.inchesToMeters(args.originalValue);
+                double res = lenConv.inchesToMeters(args.originalValue);
                 stream << args.originalValue << " inches is "
                     << res << " meters";
                 break;
@@ -267,7 +266,7 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case NauticalMile:
             switch (args.targetLengthUnit) {
             case Meter:
-                res = lenConv.nauiticalMilesToMeters(args.originalValue);
+                double res = lenConv.nauiticalMilesToMeters(args.originalValue);
                 stream << args.originalValue << " nautial miles is "
                     << res << " meters";
                 break;
@@ -279,12 +278,12 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case AstronomicalUnit:
             switch (args.targetLengthUnit) {
             case Kilometer:
-                res = lenConv.astronomicalUnitsToKilometers(args.originalValue);
+                double res = lenConv.astronomicalUnitsToKilometers(args.originalValue);
                 stream << args.originalValue << " astronomical units is "
                     << res << " kilometres";
                 break;
             case Meter:
-                res = lenConv.astronomicalUnitsToMeters(args.originalValue);
+                double res = lenConv.astronomicalUnitsToMeters(args.originalValue);
                 stream << args.originalValue << " astronomical units is "
                     << res << " meters";
                 break;
@@ -296,17 +295,17 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Span:
             switch (args.targetLengthUnit) {
             case Centimeter:
-                res = lenConv.spansToCentimeters(args.originalValue);
+                double res = lenConv.spansToCentimeters(args.originalValue);
                 stream << args.originalValue << " spans is "
                     << res << " centimeters";
                 break;
             case Meter:
-                res = lenConv.spansToMeters(args.originalValue);
+                double res = lenConv.spansToMeters(args.originalValue);
                 stream << args.originalValue << " spans is "
                     << res << " meters";
                 break;
             case Verst:
-                res = lenConv.spansToVersts(args.originalValue);
+                double res = lenConv.spansToVersts(args.originalValue);
                 stream << args.originalValue << " spans is "
                     << res << " versts";
                 break;
@@ -318,12 +317,12 @@ std::string LengthConverterApp::operator()(int argc, const char** argv) {
         case Verst:
             switch (args.targetLengthUnit) {
             case Meter:
-                res = lenConv.verstsToMeters(args.originalValue);
+                double res = lenConv.verstsToMeters(args.originalValue);
                 stream << args.originalValue << " versts is "
                     << res << "meters";
                 break;
             case Span:
-                res = lenConv.verstsToSpans(args.originalValue);
+                double res = lenConv.verstsToSpans(args.originalValue);
                 stream << args.originalValue << " versts is "
                     << res << "spans";
                 break;
