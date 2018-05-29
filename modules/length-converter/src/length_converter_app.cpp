@@ -31,8 +31,7 @@ bool LengthConverterApp::validateNumberOfArguments(int argc,
     if (argc == 1) {
         help(argv[0]);
         return false;
-    }
-    else if (argc != 4) {
+    } else if (argc != 4) {
         help(argv[0], "ERROR: Should be 3 arguments.\n\n");
         return false;
     }
@@ -54,38 +53,27 @@ LengthUnit parseLengthUnit(const char* arg) {
     LengthUnit lenUnit;
     if (strcmp(arg, "Centimeter") == 0) {
         lenUnit = Centimeter;
-    }
-    else if (strcmp(arg, "Meter") == 0) {
+    } else if (strcmp(arg, "Meter") == 0) {
         lenUnit = Meter;
-    }
-    else if (strcmp(arg, "Kilometer") == 0) {
+    } else if (strcmp(arg, "Kilometer") == 0) {
         lenUnit = Kilometer;
-    }
-    else if (strcmp(arg, "Mile") == 0) {
+    } else if (strcmp(arg, "Mile") == 0) {
         lenUnit = Mile;
-    }
-    else if (strcmp(arg, "Foot") == 0) {
+    } else if (strcmp(arg, "Foot") == 0) {
         lenUnit = Foot;
-    }
-    else if (strcmp(arg, "Yard") == 0) {
+    } else if (strcmp(arg, "Yard") == 0) {
         lenUnit = Yard;
-    }
-    else if (strcmp(arg, "Inch") == 0) {
+    } else if (strcmp(arg, "Inch") == 0) {
         lenUnit = Inch;
-    }
-    else if (strcmp(arg, "NauticalMile") == 0) {
+    } else if (strcmp(arg, "NauticalMile") == 0) {
         lenUnit = NauticalMile;
-    }
-    else if (strcmp(arg, "AstronomicalUnit") == 0) {
+    } else if (strcmp(arg, "AstronomicalUnit") == 0) {
         lenUnit = AstronomicalUnit;
-    }
-    else if (strcmp(arg, "Span") == 0) {
+    } else if (strcmp(arg, "Span") == 0) {
         lenUnit = Span;
-    }
-    else if (strcmp(arg, "Verst") == 0) {
+    } else if (strcmp(arg, "Verst") == 0) {
         lenUnit = Verst;
-    }
-    else {
+    } else {
         throw std::string("Wrong length unit format!");
     }
     return lenUnit;
