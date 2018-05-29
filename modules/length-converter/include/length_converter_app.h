@@ -5,15 +5,15 @@
 
 #include <string>
 
-enum LengthUnit { Centimeter, Meter, Kilometer, Mile, Foot, 
+enum LengthUnit { Centimeter, Meter, Kilometer, Mile, Foot,
                 Yard, Inch, NauticalMile, AstronomicalUnit, Span, Verst};
 
 class LengthConverterApp {
-public:
+ public:
     LengthConverterApp();
     std::string operator()(int argc, const char** argv);
 
-private:
+ private:
     void help(const char* appname, const char* message = "");
     bool validateNumberOfArguments(int argc, const char** argv);
     std::string message_;
